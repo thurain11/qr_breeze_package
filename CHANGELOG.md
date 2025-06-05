@@ -1,3 +1,2 @@
 ## 0.0.1
-
-* TODO: Describe initial release.
+- Initial release with QR and barcode scanning support.

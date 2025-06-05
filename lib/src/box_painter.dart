@@ -23,7 +23,7 @@ class QrScanBoxPainter extends CustomPainter {
     // Draw animated scan line
     final scanLinePaint =
         Paint()
-          ..color = boxLineColor.withOpacity(0.8)
+          ..color = boxLineColor.withValues(alpha: 0.8)
           ..strokeWidth = 4.0
           ..shader = LinearGradient(
             colors: [Colors.transparent, boxLineColor, Colors.transparent],
@@ -45,7 +45,7 @@ class QrScanBoxPainter extends CustomPainter {
           ..strokeWidth = 5.0
           ..style = PaintingStyle.stroke
           ..shader = RadialGradient(
-            colors: [boxLineColor, boxLineColor.withOpacity(0.6)],
+            colors: [boxLineColor, boxLineColor.withValues(alpha: 0.6)],
             radius: 0.5,
           ).createShader(Rect.fromLTWH(0, 0, 20, 20));
     const cornerLength = 25.0;

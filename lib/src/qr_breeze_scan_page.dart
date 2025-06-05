@@ -76,7 +76,7 @@ class _QRBreezeState extends State<QRBreeze>
           setState(() {
             _scannedData = 'No QR code found in the image';
           });
-          Navigator.pop(context, _scannedData); // Return error message
+          //Navigator.pop(context, _scannedData); // Return error message
         }
       } catch (e) {
         if (!mounted) return; // Check before showing SnackBar
@@ -89,7 +89,7 @@ class _QRBreezeState extends State<QRBreeze>
             backgroundColor: Colors.redAccent,
           ),
         );
-        Navigator.pop(context, _scannedData); // Return error message
+       // Navigator.pop(context, _scannedData); // Return error message
       }
     } else {
       if (!mounted) return; // Check before showing dialog
@@ -111,10 +111,10 @@ class _QRBreezeState extends State<QRBreeze>
           decoration: BoxDecoration(
             // color: Colors.white.withOpacity(0.1),
             borderRadius: BorderRadius.circular(8),
-            border: Border.all(color: Colors.white.withOpacity(0.2)),
+            border: Border.all(color: Colors.white.withValues(alpha: 0.2)),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.2),
+                color: Colors.black.withValues(alpha: 0.2),
                 blurRadius: 10,
                 spreadRadius: 5,
               ),
@@ -262,7 +262,7 @@ class _QRBreezeState extends State<QRBreeze>
                   child: Text(
                     widget.title ?? 'Scan QR Code',
                     style: TextStyle(
-                      color: Colors.white.withOpacity(0.8),
+                      color: Colors.white.withValues(alpha: 0.8),
                       fontSize: 16,
                       fontWeight: FontWeight.w500,
                     ),
@@ -287,11 +287,11 @@ class _QRBreezeState extends State<QRBreeze>
                       padding: const EdgeInsets.all(8),
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color: widget.boxLineColor ??
-                            Colors.white.withOpacity(0.4),
+                        color:
+                            Colors.white.withValues(alpha: 0.4),
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.white.withOpacity(0.2),
+                            color: Colors.white.withValues(alpha: 0.2),
                             blurRadius: 5,
                             spreadRadius: 1,
                           ),
@@ -299,16 +299,16 @@ class _QRBreezeState extends State<QRBreeze>
                       ),
                       child: _isTorchOn
                           ? Image.asset(
-                              color: widget.boxLineColor ?? Colors.redAccent,
+
                               width: 35,
                               height: 35,
                               fit: BoxFit.fill,
-                              'assets/images/tool_flashlight_open.png',
+                        'packages/qr_breeze/assets/images/tool_flashlight_open.png',
                             )
                           : Image.asset(
                               width: 35,
                               height: 35,
-                              'assets/images/tool_flashlight_close.png',
+                        'packages/qr_breeze/assets/images/tool_flashlight_close.png',
                             ),
                       // Icon(
                       //   _isTorchOn ? Icons.flash_on : Icons.flash_off,
@@ -333,11 +333,11 @@ class _QRBreezeState extends State<QRBreeze>
                     ),
                     margin: const EdgeInsets.symmetric(horizontal: 20),
                     decoration: BoxDecoration(
-                      color: Colors.black.withOpacity(0.7),
+                      color: Colors.black.withValues(alpha: 0.7),
                       borderRadius: BorderRadius.circular(12),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black.withOpacity(0.3),
+                          color: Colors.black.withValues(alpha: 0.3),
                           blurRadius: 10,
                           spreadRadius: 2,
                         ),
@@ -422,7 +422,7 @@ class _QRBreezeState extends State<QRBreeze>
           borderRadius: BorderRadius.circular(8),
           boxShadow: [
             BoxShadow(
-              color: Colors.white.withOpacity(0.5),
+              color: Colors.white.withValues(alpha: 0.5),
               blurRadius: 2,
               spreadRadius: 0.5,
             ),
