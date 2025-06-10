@@ -10,12 +10,12 @@ class QRBreeze extends StatefulWidget {
   final String? title; // Custom title for AppBar
   const QRBreeze({super.key, this.boxLineColor, this.title = 'Scan QR Code'});
 
-  // ignore: library_private_types_in_public_api
+   // @ignore: library_private_types_in_public_api
   @override
-  _QRBreezeState createState() => _QRBreezeState();
+  QRBreezeState createState() => QRBreezeState();
 }
 
-class _QRBreezeState extends State<QRBreeze>
+class QRBreezeState extends State<QRBreeze>
     with SingleTickerProviderStateMixin {
   String? _scannedData;
   bool _isPermissionGranted = false;
