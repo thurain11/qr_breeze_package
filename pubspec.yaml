@@ -1,8 +1,8 @@
 name: qr_breeze
 description: A Flutter package for scanning QR codes and barcodes with a customizable UI.
 version: 0.0.1
-homepage: https://github.com/yourusername/qr_breeze
-repository: https://github.com/yourusername/qr_breeze
+homepage: https://github.com/thurain11/qr_breeze_package.git
+repository: https://github.com/thurain11/qr_breeze_package.git
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
@@ -19,6 +19,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_lints:
 
 
 # For information on the generic Dart part of this file, see the

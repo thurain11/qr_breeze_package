@@ -75,24 +75,12 @@ class MyApp extends StatelessWidget {
 ```
 
 
-Then, declare them in your project's `pubspec.yaml`:
-
-```yaml
-flutter:
-  assets:
-    - assets/images/tool_flashlight_open.png
-    - assets/images/tool_flashlight_close.png
-```
-
-**Note**: If the package uses `packages/qr_breeze/` prefix for assets (as recommended), you don't need to copy these files to your project.
-
-
 ## Dependencies
 
 QRBreeze relies on the following packages:
-- `mobile_scanner: ^7.0.1` - For QR code and barcode scanning.
-- `image_picker: ^1.1.2` - For picking images from the gallery.
-- `permission_handler: 12.0.0+1` - For managing camera and photo permissions.
+- `mobile_scanner: ` - For QR code and barcode scanning.
+- `image_picker: ` - For picking images from the gallery.
+- `permission_handler: ` - For managing camera and photo permissions.
 
 Ensure your project meets the requirements for these dependencies.
 
@@ -104,7 +92,7 @@ Ensure your project meets the requirements for these dependencies.
 
 ## Contributing
 
-Contributions are welcome! If you find a bug or have a feature request, please open an issue on the [GitHub repository](https://github.com/yourusername/qr_breeze). To contribute code:
+Contributions are welcome! If you find a bug or have a feature request, please open an issue on the [GitHub repository](https://github.com/thurain11/qr_breeze_package.git). To contribute code:
 
 1. Fork the repository.
 2. Create a new branch for your feature or bug fix.
@@ -116,7 +104,7 @@ This package is licensed under the [MIT License](LICENSE). See the `LICENSE` fil
 
 ## Contact
 
-For questions or support, please open an issue on the [GitHub repository](https://github.com/yourusername/qr_breeze) or contact the maintainer at [thurainhein097@gmail.com].
+For questions or support, please open an issue on the [GitHub repository](https://github.com/thurain11/qr_breeze_package) or contact the maintainer at [thurainhein097@gmail.com].
 
 ---
 

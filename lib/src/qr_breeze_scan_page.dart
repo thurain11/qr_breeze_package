@@ -10,6 +10,7 @@ class QRBreeze extends StatefulWidget {
   final String? title; // Custom title for AppBar
   const QRBreeze({super.key, this.boxLineColor, this.title = 'Scan QR Code'});
 
+  // ignore: library_private_types_in_public_api
   @override
   _QRBreezeState createState() => _QRBreezeState();
 }
@@ -299,7 +300,6 @@ class _QRBreezeState extends State<QRBreeze>
                       ),
                       child: _isTorchOn
                           ? Image.asset(
-
                               width: 35,
                               height: 35,
                               fit: BoxFit.fill,
@@ -359,39 +359,26 @@ class _QRBreezeState extends State<QRBreeze>
               Positioned(
                 bottom: 20,
                 width: constraints.maxWidth,
-                child: Container(
-                  // decoration: BoxDecoration(
-                  //   color: Colors.grey.withOpacity(0.7),
-                  //   // borderRadius: BorderRadius.circular(12),
-                  //   boxShadow: [
-                  //     BoxShadow(
-                  //       color: Colors.black.withOpacity(0.3),
-                  //       blurRadius: 10,
-                  //       spreadRadius: 2,
-                  //     ),
-                  //   ],
-                  // ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      _buildAnimatedButton(
-                        text: 'Reset',
-                        icon: Icons.refresh,
-                        onPressed: () {
-                          setState(() {
-                            _scannedData = null;
-                          });
-                          _controller.start();
-                        },
-                      ),
-                      const SizedBox(width: 16),
-                      _buildAnimatedButton(
-                        text: ' Gallery',
-                        icon: Icons.photo_library_outlined,
-                        onPressed: _pickAndScanImage,
-                      ),
-                    ],
-                  ),
+                child:Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    _buildAnimatedButton(
+                      text: 'Reset',
+                      icon: Icons.refresh,
+                      onPressed: () {
+                        setState(() {
+                          _scannedData = null;
+                        });
+                        _controller.start();
+                      },
+                    ),
+                    const SizedBox(width: 16),
+                    _buildAnimatedButton(
+                      text: ' Gallery',
+                      icon: Icons.photo_library_outlined,
+                      onPressed: _pickAndScanImage,
+                    ),
+                  ],
                 ),
               ),
             ],
@@ -411,14 +398,9 @@ class _QRBreezeState extends State<QRBreeze>
       onTap: onPressed,
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 200),
-        transform: Matrix4.identity()..scale(onPressed == null ? 0.95 : 1.0),
+        transform: Matrix4.identity()..scale(1.0),
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         decoration: BoxDecoration(
-          // gradient: const LinearGradient(
-          //   colors: [Colors.blueAccent, Colors.purpleAccent],
-          //   begin: Alignment.topLeft,
-          //   end: Alignment.bottomRight,
-          // ),
           borderRadius: BorderRadius.circular(8),
           boxShadow: [
             BoxShadow(
